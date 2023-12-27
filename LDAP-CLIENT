@@ -1,0 +1,27 @@
+    1  hostname
+    2  hostnamectl set-hostname master.demo.lab
+    3  su -root
+    4  su -
+    5  cd
+    6  ip a
+    7  nmtui
+    8  ip a
+    9  systemctl stop firewalld
+   10  systemctl disable firewalld
+   11  systemctl status firewalld
+   12  getenforce
+   13  setenforce 0
+   14  sudo setenforce 0
+   15  getenforce
+   16  hostnamectl set-hostname node.demo.lab
+   17  hostname
+   18  sudo vi /etc/hosts
+   19  ip a
+   20  ping 192.168.10.2
+   21  ping 192.168.10.3
+   22  sudo vi /etc/selinux/config
+   23  cd
+   24  history
+sudo yum install openldap-clients nss-pam-ldapd
+sudo authconfig --enableldap --enableldapauth --ldapserver=192.168.10.3 --ldapbasedn="dc=cdac,dc=in" --enablemkhomedir --update
+ldapsearch -x   ::SHOWS USER IS CREATED
