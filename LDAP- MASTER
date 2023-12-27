@@ -1,0 +1,96 @@
+1  cd
+    2  hostname
+    3  hostnamectl set-hostname master.demo.lab
+    4  hostname
+    5  nmtui
+    6  ip a
+    7  vi /etc/hosts
+    8  sudo vi /etc/hosts
+    9  systemctl status firewalld
+   10  systemctl stop firewalld
+   11  systemctl disable firewalld
+   12  systemctl status firewalld
+   13  getenforce
+   14  setenforce 0
+   15  sudo setenforce 0
+   16  getenforce
+   17  ping 192.168.10.2
+   18  ping 192.168.10.3
+   19  sestatus
+   20  getenforce
+   21  sudo vi /etc/selinux/config
+   22  su -
+   23  sestatus
+   24  systemctl status firewalld
+   25  ping 192.168.10.3
+   26  ping 192.168.10.2
+   27  yum install openldap-servers openldap-clients
+   28  sudo yum install openldap-servers openldap-clients
+   29  cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
+   30  sudo cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
+   31  cd /var
+   32  cd /lib
+   33  cd ldap
+   34  cd /ldap
+   35  ls
+   36  sudo cat /ldap/DB_CONFIG
+   37  cd
+   38  sudo cat /var/lib/ldap/DB_CONFIG
+   39  chown ldap. /var/lib/ldap/DB_CONFIG
+   40  sudo chown ldap. /var/lib/ldap/DB_CONFIG
+   41  sudo ls/var/lib/ldap/DB_CONFIG
+   42  sudo ls /var/lib/ldap/DB_CONFIG
+   43  systemctl start slapd
+   44  systemctl enable slapd
+   45  systemctl status slapd
+   46  slappasswd root
+   47  sudo slappasswd root
+   48  sudo slappasswd 
+   49  vi passwords
+   50  vi chroot.ldif
+   51  cat chroot.ldif
+   52  ldapadd -Y EXTERNAL -H ldapi:/// -f chrootpw.ldif
+   53  vi chrootpw.ldif
+   54  ldapadd -Y EXTERNAL -H ldapi:/// -f chrootpw.ldif
+   55  rm chroot.ldif
+   56  cat chrootpw.ldif
+   57  vi chrootpw.ldif
+   58  ldapadd -Y EXTERNAL -H ldapi:/// -f chrootpw.ldif
+   59  sudo ldapadd -Y EXTERNAL -H ldapi:/// -f chrootpw.ldif
+   60  sudo ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/cosine.ldif 
+   61  sudo vi /etc/openldap/schema/cosine.ldif 
+   62  sudo vi /etc/openldap/schema/nis.ldif 
+   63  sudo ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/nis.ldif 
+   64* 
+   65  sudo ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/inetorgperson.ldif 
+   66  sudo vi /etc/openldap/schema/inetorgperson.ldif 
+   67  vi chdomain.ldif
+   68  sudo ldapmodify -Y EXTERNAL -H ldapi:/// -f chdomain.ldif
+   69  vi chdomain.ldif
+   70  vi basedomain.ldif
+   71  ldapadd -x -D cn=Manager,dc=cdac,dc=in -W -f basedomain.ldif
+   72  vi basedomain.ldif
+   73  history
+   74  vi chrootpw.ldif
+   75  vi ldapuser.ldif
+   76  vi chdomain.ldif
+   77  ldapadd -x -D cn=Manager,dc=cdac,dc=in -W -f ldapuser.ldif
+   78* 
+   79  vi ldapuser.ldif
+   80  history
+   81  vi ldapuser.ldif
+   82  vi passwords 
+   83  vi ldapuser.ldif
+   84  ldapadd -x -D cn=Manager,dc=cdac,dc=in -W -f ldapuser.ldif
+   85  ip a
+   86  vi ldapuser.ldif
+   87  ldapadd -x -D cn=Manager,dc=cdac,dc=in -W -f ldapuser.ldif
+   88  vi ldapuser.ldif
+   89  ldapadd -x -D cn=Manager,dc=cdac,dc=in -W -f ldapuser.ldif
+   90  vi ldapuser.ldif
+   91  yum install nss-pam-ldap
+   92  sudo yum install nss-pam-ldap
+   93  sudo yum install nss-pam-ldapd
+   94  vi ldapuser.ldif
+   95  ldapadd -x -D cn=Manager,dc=cdac,dc=in -W -f ldapuser.ldif
+   96  history
